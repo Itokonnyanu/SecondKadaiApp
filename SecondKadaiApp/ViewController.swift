@@ -20,6 +20,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var textField: UITextField!
+    @IBAction func exit (_ segue: UIStoryboardSegue){
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController2: ViewController2 = segue.destination as! ViewController2
+        viewController2.kari = textField.text!
+        
+    }
 }
 
